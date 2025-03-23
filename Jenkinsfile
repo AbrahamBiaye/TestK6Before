@@ -8,7 +8,7 @@ pipeline {
         stage('Performance Testing') {
             steps {
                 echo 'Running K6 performance tests...'
-                sh '/usr/local/opt/k6 run k6.js'
+                sh '/usr/local/bin/k6 run k6.js'
             }
         }
     }
