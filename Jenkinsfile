@@ -1,6 +1,9 @@
 
 pipeline {
     agent any
+    triggers {
+    pollSCM('* * * * *')  // Vérifie les mises à jour chaque minute
+}
     stages {
         stage('Performance Testing') {
             steps {
